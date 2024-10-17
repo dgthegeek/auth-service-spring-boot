@@ -1,0 +1,21 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: auth-service
+  security:
+    filter:
+      order: 10
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/letsplay
+jwt:
+  secret: yourSecretKey
+  expiration: 86400000
+cors:
+  allowed-origins: "http://localhost:3000"
+  allowed-methods: "GET,POST,PUT,DELETE,OPTIONS"
+  allowed-headers: "*"
+  exposed-headers: "Authorization"
+  max-age: 3600
+
